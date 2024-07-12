@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 08</title>
+    <style type="text/css">
+        *{margin: 0; padding: 0;}
+        .wrap{
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .left{
+            float: left;
+            width: 20%;
+            height: 400px;
+            background-color: lightseagreen;
+        }
+
+        .right{
+            float: left;
+            width: 80%;
+            /* height: 400px; */
+            background-color: lightsalmon;
+        }
+        .right .r_up{
+            height: 200px;
+            background-color: antiquewhite;
+        }
+
+        .right .r_down{
+            height: 200px;
+            background-color: aquamarine;
+        }
+
+
+        /* 1024 */
+        @media screen and (max-width:1024px) {
+            .wrap{
+                width: 90%;
+            }
+        }
+
+
+
+
+        /* 800 */
+        @media screen and (max-width:800px) {
+            .wrap{width: 100%;}
+
+            .left{
+                width: 100%;
+                float: none;
+            }
+            .right{
+                width: auto;
+                float: none;
+            }
+
+            .right .r_up{height: 400px;}
+
+            .right .r_down{height: 400px;}
+
+
+
+        }
+
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+    <div class="wrap">
+
+        <aside class="left">aside</aside>
+
+        <section class="right">
+            <div class="r_up">r_up</div>
+            <div class="r_down">r_down</div>
+        </section><!-- right -->
+
+    </div><!-- wrap -->
+
+
+    
+</body>
+</html>

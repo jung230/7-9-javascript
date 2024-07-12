@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 반응형01 </title>
+
+    <style type="text/css">
+
+        body{background-color: seashell;}
+
+        h1{color:lightblue;}
+
+        .wrap{
+            /* width: 1000px; */
+            /* width: 90%;  */
+            width: 90vw;
+            height: 500px;
+            border: 5px solid royalblue;
+            box-sizing: border-box;
+        }
+
+        /* 가로방향이면 red 
+        세로방향이면 green */
+
+        @media screen and (orientation : landscape){
+            /* orientation : landscape :가로방향이 더 클때 */
+            body{background-color: red;}
+            h1{color: white;}
+            .wrap{border: 5px solid silver;}
+        }
+
+        @media screen and (orientation : portrait){
+            /* orientation : portrait :세로방향이 더 클때 */
+            body{background-color: green;}
+            h1{color: yellow;}
+        }
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+    <div class="wrap"></div>
+
+    <h1>@ media Query</h1>
+
+
+
+
+    
+</body>
+</html>

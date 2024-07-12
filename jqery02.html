@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>each</title>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <script lang="java">
+        $(function(){
+
+            $(".list li").each(function(index){
+                console.log("index : " , index);
+                console.log("this : " , this );
+                console.log("this text : " , $(this).text() );
+                console.log("this data : ", $(this).attr("data"));
+            })// each
+
+
+            $(".item li").each(function(i){
+                var back = $(this).attr("bg");
+                $(this).css({background : back});
+            })
+
+
+
+            //each 각각의 함수에 명령을 넣음
+
+
+
+        })// jquery
+    </script>
+
+    
+
+
+</head>
+<body>
+
+    <div class="box">
+
+        <h1>each event</h1>
+
+        <ul class="list">
+            <li class="first" data="1">one</li>
+            <li data="2">two</li>
+            <li data="3">three</li>
+        </ul><!-- list -->
+
+        <ul class="item">
+            <li bg="#f00">빨강</li>
+            <li bg="#ff0">노랑</li>
+            <li bg="#00f">파랑</li>
+            <li bg="#0f0">초록</li>
+        </ul><!-- item -->
+
+    </div>
+    
+</body>
+</html>

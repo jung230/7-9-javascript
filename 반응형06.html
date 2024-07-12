@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 06</title>
+    <style type="text/css">
+        *{margin: 0; padding: 0;}
+
+        .wrap{
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .wrap .box1{
+            width: 100%; 
+            height: 400px;
+            background-color: lightskyblue;
+        }
+
+        .wrap .box2{
+            width: 50%; 
+            height: 400px;
+            background-color: lightcoral;
+            float: left;
+        }
+
+        .wrap .box3{
+            width: 50%; 
+            height: 400px;
+            background-color: lemonchiffon;
+            float: left;
+        }
+
+
+        /* 1024까지 wrap w90% */
+        @media screen and (max-width : 1024px) {
+            .wrap{width: 90%;}
+        }/* max-width */
+
+
+        /* 800까지 wrap w100% */
+        @media screen and (max-width : 800px) {
+            .wrap{width: 100%;}
+        }
+
+
+        /* 400까지 box 3줄로 만들기 */
+        @media screen and (max-width: 400px) {
+            .wrap .box2{
+                width: 100%; 
+                float: none;
+            }
+
+            .wrap .box3{
+                float: none;
+                width: 100%; 
+            }
+        }
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="wrap">
+
+        <div class="box1">box</div>
+        <div class="box2">box</div>
+        <div class="box3">box</div>
+
+    </div>
+
+
+    
+</body>
+</html>
